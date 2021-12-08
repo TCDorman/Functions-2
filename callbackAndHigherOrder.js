@@ -6,10 +6,13 @@
 */
 
 // CODE HERE
-Check
-commit Check
-Hello checking commit
-I am making changes
+const cb = () => (num1 * num2)
+
+const multiply = (num1, num2, cb) => {
+  
+}
+
+
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
