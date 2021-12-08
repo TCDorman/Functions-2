@@ -1,16 +1,19 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Write a function called multiply that takes in three parameters: two numbers and a callback function.  
-  Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
+  Write a function called multiply that takes in three parameters: two numbers
+  and a callback function.  
+  Invoke the callback, passing in the product of the two numbers multiplied as
+  the argument. 
 */
 
 // CODE HERE
-const cb = () => (num1 * num2)
 
-const multiply = (num1, num2, cb) => {
-  
-}
+const multiply = (num1, num2, cb) => cb (num1 * num2)
+
+multiply(2, 5, cb => {
+  console.log(cb)
+})
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -36,12 +39,15 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 ////////// PROBLEM 2 //////////
 
 /*
-  Write a function called first that takes in two parameters, an array and a callback function.
-  Then invoke the callback function, passing in the first element in the array as it's argument.
+  Write a function called first that takes in two parameters, an array and a
+  callback function. Then invoke the callback function, passing in the first
+  element in the array as it's argument.
 */
 
 // CODE HERE 
-
+const first = (arr, cb) => {
+  cb(arr[0])
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -61,7 +67,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+const last = (arr,cb) => {
+  cb
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -76,10 +84,11 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 ////////// PROBLEM 4 //////////
 
 /*
-  Write a function called contains that takes in three parameters: an array, a name and a callback.  
-  Check if the name exists in the array. 
-  If it does, invoke the callback with true as the argument. 
-  If the name does not exist, invoke the callback with false as the argument.
+  Write a function called contains that takes in three parameters: an array, a
+  name and a callback.  
+  Check if the name exists in the array. If it does, invoke the callback with
+  true as the argument. If the name does not exist, invoke the callback with
+  false as the argument.
 */
 
 // CODE HERE 
@@ -103,17 +112,17 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 /*
   Write a function called uniq that takes in an array and a callback function.
-  Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
-  Hint: you can use a nested for loop to do this.
+  Remove any duplicate values from the array, and invoke the callback with the
+  modified array as an argument. Hint: you can use a nested for loop to do this.
 */
 
 // CODE HERE
 
 /*
-  Invoke the uniq function, passing in the names array from above and a callback function.
-  The callback function should take in one parameter called uniqArr.
-  The callback should print a string that says:
-  'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
+  Invoke the uniq function, passing in the names array from above and a callback
+  function. The callback function should take in one parameter called uniqArr.
+  The callback should print a string that says: 'The new names array with all
+  the duplicate items removed is [UNIQARRPARAM].'
 */
 
 // CODE HERE
@@ -123,8 +132,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 ////////// PROBLEM 6 //////////
 
 /* 
-  Write a function called each that takes in an array of names and a callback function. 
-  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+  Write a function called each that takes in an array of names and a callback
+  function. For each name in the array, invoke the callback and pass in the name
+  and the name's index as arguments.
 */
 
 // CODE HERE 
@@ -132,9 +142,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 /*
   Invoke the each function, passing in the names array and a callback function.
-  The callback function should take in two paremeters, item and index.
-  The callback should print a string that says:
-  'The item at index [INDEXPARAM] is [ITEMPARAM].'
+  The callback function should take in two paremeters, item and index. The
+  callback should print a string that says: 'The item at index [INDEXPARAM] is
+  [ITEMPARAM].'
 */
 
 // CODE HERE
@@ -143,8 +153,10 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 ////////// PROBLEM 7 //////////
 
 /*
-  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
-  When the correct user object is found, invoke the callback with the user object as an argument.
+  Write a function called getUserById that takes in three parameters: an array
+  of objects (users), an id and a callback, and searches for the user with a
+  matching id. When the correct user object is found, invoke the callback with
+  the user object as an argument.
 */
 
 // Do not edit the code below.
@@ -177,8 +189,9 @@ var users = [
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+// getUserById(users, '16t', user => { console.log('The user with the id 16t has
+//   the email of ' + user.email + ' the name of ' + user.name + ' and the
+//   address of ' + user.address) 
 // })
 
 ////////// CHALLENGE //////////
